@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>CSS vertical-align</title>
+    <style type="text/css">
+    p {
+        border: 1px solid orange;
+    }
+    /*  img.top {
+        vertical-align: text-top
+    }
+
+    img.bottom {
+        vertical-align: text-bottom
+    }
+
+    img.aa {
+        vertical-align: text-bottom
+    }*/
+    </style>
+</head>
+
+<body>
+    <p>
+        这是一幅<img id="my_img" class="top" border="0" src="../icon.jpg" />位于段落中的图像。
+    </p>
+    <button onclick="changeStyle()">改变样式</button>
+    <div>
+        <span id="show_txt">123</span>
+    </div>
+</body>
+<script type="text/javascript">
+var num = 0;
+var list = ['baseline', 'sub', 'super', 'top', 'text-top', 'middle', 'bottom', 'text-bottom', 'inherit']
+
+function changeStyle(argument) {
+    document.getElementById('my_img').style.verticalAlign = list[num];
+    document.getElementById('show_txt').innerHTML = list[num];
+    console.log(' span...', document.getElementById('show_txt').innerHTML)
+    num++;
+    if (num > 8) num = 0;
+}
+</script>
+
+</html>
