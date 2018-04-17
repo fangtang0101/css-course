@@ -1,32 +1,26 @@
 <html>
+
 <head>
     <title>CSS vertical-align</title>
     <style type="text/css">
-    p {
+    .main {
         border: 1px solid orange;
+        height: 200px;
+        line-height: 1.5;
     }
-    /*  img.top {
-        vertical-align: text-top
+    .main span{
+        font-size: 40px;
+        /*line-height: 1.5;*/
+        vertical-align: middle;
     }
-
-    img.bottom {
-        vertical-align: text-bottom
-    }
-
-    img.aa {
-        vertical-align: text-bottom
-    }*/
     </style>
 </head>
 
 <body>
-    <p>
-        这是一幅<img id="my_img" class="top" border="0" src="../icon.jpg" />位于段落中的图像。
-    </p>
-    <button onclick="changeStyle()">改变样式</button>
-    <div>
-        <span id="show_txt">123</span>
+    <div class="main">
+        <span>常州市规划局 组织赴南京市规划局调 2018-04-10 常州市规划局组织海绵城市规划建设</span>
     </div>
+    
 </body>
 <script type="text/javascript">
 var num = 0;
