@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<style type="text/css">
+
+/*base part start */
+ul {
+	list-style:none; 
+}
+* {
+	padding:0px;
+	margin:0px;
+}
+
+/*base part end */
+ul {
+	border: 1px solid orange;
+}
+ul li {
+	width: 80%;
+    /*height: 50px;*/
+    background: #efefef;
+    margin:15px;
+    padding:10px;
+}
+ul li .icon {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	background-color:red;
+	/*background: url(../i_01.png) no-repeat center;*/
+	vertical-align: middle;
+}
+ul li .text {
+	font-size: 14px;
+	/*ps:此处的 line-height 跟着父元素的 height一致*/
+	/*line-height: 50px; */
+}
+/*
+问题：
+1.此处 demo 承接上个 01 的demo 
+2. 实际上 vertical-align 做不到垂直 居中，而是偏下一点点
+*/
+
+</style>
+
+<body>
+
+	<ul>
+        <li>
+            <i class="icon"></i>
+            <span class="text">起点</span>
+        </li>
+        <li>
+            <i class="icon"></i>
+            <span class="text">终点</span>
+        </li>
+    </ul>
+
+</body>
+
+</html>
