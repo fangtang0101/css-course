@@ -132,7 +132,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "ul {\n  background-color: red; }\n  ul li {\n    height: 300px; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n/*base part start */\nul {\n  list-style: none; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\n/*base part end */\nul {\n  border: 1px solid orange; }\n  ul li {\n    width: 80%;\n    /*height: 50px;*/\n    background: #efefef;\n    margin: 15px;\n    padding: 10px; }\n    ul li .icon {\n      display: inline-block;\n      width: 20px;\n      height: 28px;\n      background-color: red;\n      background: url(/i_01.png) no-repeat center;\n      vertical-align: middle; }\n    ul li .text {\n      font-size: 14px;\n      /*ps:此处的 line-height 跟着父元素的 height一致*/\n      /*line-height: 50px; */ }\n    ul li img {\n      vertical-align: middle;\n      display: inline-block; }\n", ""]);
 
 // exports
 

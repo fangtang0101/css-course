@@ -1,6 +1,40 @@
+/*base part start */
+
 ul {
-	background-color: red;
-	li {
-		height: 300px;
-	}
+    list-style: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*base part end */
+
+ul {
+    border: 1px solid orange;
+    li {
+        width: 80%;
+        /*height: 50px;*/
+        background: #efefef;
+        margin: 15px;
+        padding: 10px;
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 28px;
+            background-color: red;
+            // background: url(/i_01.png) no-repeat center;
+            vertical-align: middle;
+        }
+        .text {
+            font-size: 14px;
+            /*ps:此处的 line-height 跟着父元素的 height一致*/
+            /*line-height: 50px; */
+        }
+        img {
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
 }
