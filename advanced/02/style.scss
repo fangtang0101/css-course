@@ -1,0 +1,84 @@
+/*base part start */
+
+// mobile 移动设备断点，视窗宽度 ≤ 768 px
+@media (max-width: 768px) {
+    ul.ex01 {
+        background: #999;
+    }
+}
+// tablet 平板电脑设备断点，视窗宽度 ≥ 769 px
+@media (min-width: 769px) and (max-width: 1023px) {
+    ul.ex01 {
+        background: #777;
+    }
+}
+
+// desktop 桌面电脑断点，视窗宽度 ≥ 1024 px
+@media (min-width: 1024px) and (max-width: 1216px) {
+    ul.ex01 {
+        background: #666;
+    }
+}
+
+// widescreen  宽屏电脑断点，视窗宽度 ≥ 1216 px
+@media (min-width: 1216px) and (max-width: 1408px) {
+    ul.ex01 {
+        background: #555;
+    }
+}
+
+// fullhd  高清宽屏电脑断点，视窗宽度 ≥ 1408 px...
+@media (min-width: 1408px ) {
+    ul.ex01 {
+        background: #333;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.ex01 {
+    border: 1px solid orange;
+    li {
+        width: 80%;
+        /*height: 50px;*/
+        background: #efefef;
+        margin: 15px;
+        padding: 10px;
+        .icon {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background-color: red;
+            /*background: url(../i_01.png) no-repeat center;*/
+            vertical-align: middle;
+        }
+        .text {
+            font-size: 14px;
+            vertical-align: middle;
+
+            /*ps:此处的 line-height 跟着父元素的 height一致*/
+            /*line-height: 50px; */
+        }
+        img {
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
