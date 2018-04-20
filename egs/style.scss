@@ -9,6 +9,7 @@ ul {
     margin: 0px;
 }
 
+
 /*base part end */
 
 ul.ex01 {
@@ -23,8 +24,36 @@ ul.ex01 {
             display: inline-block;
             width: 20px;
             height: 28px;
+            background-color: red; // background: url(/i_01.png) no-repeat center;
+            vertical-align: middle;
+        }
+        .text {
+            font-size: 14px;
+            /*ps:此处的 line-height 跟着父元素的 height一致*/
+            /*line-height: 50px; */
+        }
+        img {
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+}
+
+// ps 其实小的原点 并没有 垂直居中 对齐
+ul.ex02 {
+    border: 1px solid orange;
+    li {
+        width: 80%;
+        /*height: 50px;*/
+        background: #efefef;
+        margin: 15px;
+        padding: 10px;
+        .icon {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
             background-color: red;
-            // background: url(/i_01.png) no-repeat center;
+            /*background: url(../i_01.png) no-repeat center;*/
             vertical-align: middle;
         }
         .text {
