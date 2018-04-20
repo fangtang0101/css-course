@@ -38,7 +38,9 @@ ul.ex01 {
     }
 }
 
-// ps 其实小的原点 并没有 垂直居中 对齐
+//  这个例子 对比 01 注意 小的方形是居中的
+//  1. 可以备注 .text 中的 vertical-align: middle;  试试  display: inline-block;(加不加 无所谓)
+//  2. vertical-align: middle 生效的条件 a. 父组件 不设置 高度，子组件 才可以居中 b.当父组件中设置了height，那么子组件的 line-height = 父组件的height
 ul.ex02 {
     border: 1px solid orange;
     li {
@@ -57,6 +59,8 @@ ul.ex02 {
         }
         .text {
             font-size: 14px;
+            vertical-align: middle;  
+
             /*ps:此处的 line-height 跟着父元素的 height一致*/
             /*line-height: 50px; */
         }
@@ -107,6 +111,7 @@ ul.ex03 {
 }
 
 //   table-cell 方式居中  问题：width 被撑开
+//   总结：父组件 display= table  子组件display: table-cell; 并设置 text-align：center 和 vertical-align:middle 实现居中对齐
 ul.ex04 {
     border: 1px solid orange;
     li {
@@ -118,11 +123,19 @@ ul.ex04 {
         display: table;
         /*width: 100%;*/
         div {
-            background: #666;
+            // 里面其实是 按照 3 ：5 的比例分配的（30%：50%   100px：200px/  100px:50% => 1:1(以百分比为主)）
+            &:nth-child(1){
+                width: 100px;
+            }
+             &:nth-child(2){
+                width: 50%;
+            }
+            // background: #666; //在html 中已经添加
             /*width: 50px !important;*/
             display: table-cell;
             text-align: center;
             vertical-align: middle;
+
             .icon {
                 display: inline-block;
                 width: 20px;
@@ -145,6 +158,7 @@ ul.ex04 {
 
 
 // 绝对定位的方式 实现 ps:固定 宽高 ，水平 垂直 居中 问题：定宽高
+// 1.父组件 postion:relative  子组件 postion:absolute  left top left right = 0  margin 0 即可
 ul.ex05 {
     border: 1px solid orange;
     li {
