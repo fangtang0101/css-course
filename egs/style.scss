@@ -201,7 +201,9 @@ ul.ex05 {
 }
 
 // Flexbox 居中 不定 宽高
+// http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html  教程
 // 1.注意 div 可以 给 宽度 也可以不给宽度 width 与 height 随便，都可以实现 水平垂直居中
+// 问题：兼容性 IE 10+ 
 ul.ex06 {
     border: 1px solid orange;
     li {
@@ -217,7 +219,6 @@ ul.ex06 {
             background: #666;
             width: 200px;
             height: 150px;
-            /* 有了这个就自动居中了 */
             .icon {
                 display: inline-block;
                 width: 20px;
