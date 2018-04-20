@@ -9,7 +9,6 @@ ul {
     margin: 0px;
 }
 
-
 /*base part end */
 
 ul.ex01 {
@@ -64,6 +63,123 @@ ul.ex02 {
         img {
             vertical-align: middle;
             display: inline-block;
+        }
+    }
+}
+
+
+
+
+
+
+
+/*
+总结：
+1.父元素 尽量不要设置 高度 ，通过  padding 来达到固定的值
+2.若父元素  设置了 height = 100 ，那么 需要对齐的 icon 设置 vertical-align :middile + line-height = 父元素的高度(不是100%，而是100px);
+*/
+
+ul.ex03 {
+    border: 1px solid orange;
+    li {
+        width: 80%;
+        /*height: 50px;*/
+        background: #efefef;
+        margin: 15px;
+        padding: 10px;
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 28px;
+            background-color: red; // background: url(../i_01.png) no-repeat center;
+            vertical-align: middle;
+        }
+        .text {
+            font-size: 14px;
+            /*ps:此处的 line-height 跟着父元素的 height一致*/
+            /*line-height: 50px; */
+        }
+        img {
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+}
+
+//   table-cell 方式居中  问题：width 被撑开
+ul.ex04 {
+    border: 1px solid orange;
+    li {
+        width: 80%;
+        height: 300px;
+        background: #efefef;
+        margin: 15px;
+        padding: 10px;
+        display: table;
+        /*width: 100%;*/
+        div {
+            background: #666;
+            /*width: 50px !important;*/
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            .icon {
+                display: inline-block;
+                width: 20px;
+                height: 28px;
+                background-color: red; // background: url(../i_01.png) no-repeat center;
+                vertical-align: middle;
+            }
+            .text {
+                font-size: 14px;
+                /*ps:此处的 line-height 跟着父元素的 height一致*/
+                /*line-height: 50px; */
+            }
+            img {
+                vertical-align: middle;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+// 绝对定位的方式 实现 ps:固定 宽高 ，水平 垂直 居中 问题：定宽高
+ul.ex05 {
+    border: 1px solid orange;
+    li {
+        width: 80%;
+        height: 300px;
+        background: #efefef;
+        margin: 15px;
+        padding: 10px;
+        position: relative;
+        div {
+            background: #666;
+            width: 200px;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            /* 有了这个就自动居中了 */
+            .icon {
+                display: inline-block;
+                width: 20px;
+                height: 28px;
+                background-color: red; // background: url(../i_01.png) no-repeat center;
+                vertical-align: middle;
+            }
+            .text {
+                font-size: 14px;
+                line-height: 150px;
+            }
+            img {
+                vertical-align: middle;
+                display: inline-block;
+            }
         }
     }
 }
