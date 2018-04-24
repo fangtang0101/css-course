@@ -2,6 +2,7 @@
 /node_modules/
 /egs/node_modules/
 /advanced/02/node_modules/
+/advanced/03/node_modules/
 /dist/
 npm-debug.log*
 yarn-debug.log*

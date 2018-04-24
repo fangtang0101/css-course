@@ -1,0 +1,63 @@
+/*base part start */
+
+// iPhone 6尺寸作为设计稿基准
+$vwbase: 375;
+@function vw($px) {
+    @return ($px/$vwbase) * 100vw;
+}
+
+ul {
+    list-style: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// 利用 vw 自动随着屏幕变大而变大，缩小而缩小
+ul.ex01 {
+    border: 1px solid orange;
+    li {
+        // width: vw(350);
+        background: #efefef;
+        padding: vw(5);
+        overflow: hidden;
+        height: vw(110);
+        div {
+            &:nth-child(1) {
+                float: left;
+                img {
+                    width: vw(130);
+                    height: vw(100);
+                }
+            }
+            &:nth-child(2) {
+                float: left;
+                margin-left: vw(10);
+                ul {
+                    height: 100%;
+                    li {
+                        background-color: #999;
+                        height: vw(30);
+                        max-width: vw(210);
+                         /*省略号*/
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        span {
+                            display: inline-block;
+                            max-width: vw(210);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
