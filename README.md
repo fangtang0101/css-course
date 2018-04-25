@@ -57,6 +57,18 @@ npm run dev
 
 ```
 
+2. 03  --- > vm 作为单位，按照比列所以元素 缩小 放大
+```
+$vwbase: 375;
+@function vw($px) {
+    @return ($px/$vwbase) * 100vw;
+}
 
+div{
+    width: vm(100)
+}
+
+
+```
 
 
