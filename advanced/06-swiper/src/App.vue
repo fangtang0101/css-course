@@ -1,24 +1,23 @@
-<template lang="pug">
-#app
-  span Hello iHappy
+<template>
+  <div id="app">
+    <!-- <img src="./assets/logo.png"> -->
+    <router-view/>
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'App'
+}
 </script>
 
-<style lang="less">
-* {
-  box-sizing: border-box;
-}
+<style>
 #app {
-  height: 100%;
-  font-size: 0.14rem;
-  input,
-  button {
-    outline: none;
-    border-style: none;
-    padding: 0 8px;
-  }
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>

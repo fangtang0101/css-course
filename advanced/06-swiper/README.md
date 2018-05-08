@@ -1,11 +1,21 @@
-`npm i`
+# swiper
 
-or
+> A Vue.js project
 
-`cnpm i`
+## Build Setup
 
-开发：`npm run dev`
+``` bash
+# install dependencies
+npm install
 
-构建：`npm run build`
+# serve with hot reload at localhost:8080
+npm run dev
 
-发布：`npm run release`（暂定）
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
