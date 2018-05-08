@@ -4,16 +4,16 @@
   <div>
     <swiper :options="swiperOption" class="swiper-box">
       <swiper-slide>
-        <div class="page_all"><img :src="url"></div>
+        <div class="page_all_one page_all">page one</div>
       </swiper-slide>
       <swiper-slide>
-        <div class="page_all"><img :src="url"></div>
+        <div class="page_all_two page_all">page two</div>
       </swiper-slide>
       <swiper-slide>
-        <div class="page_all"><img :src="url"></div>
+        <div class="page_all_three page_all">page three</div>
       </swiper-slide>
       <swiper-slide>
-        <div class="page_all"><img :src="url"></div>
+        <div class="page_all_four page_all">page four</div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -32,14 +32,11 @@ export default {
   name: 'sw',
   data() {
     return {
-      // url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525670746457&di=ee3a429c99d08fe3cca6c1531d724e79&imgtype=0&src=http%3A%2F%2Fpic2016.ytqmx.com%3A82%2F2016%2F1229%2F18%2F5.jpg%2521960.jpg',
       url: 'http://wmimg.sc115.com/phone/pic/0729/1607fiuoa03dge2.jpg',
-
       msg: 'Welcome to Your Vue.js App',
-
       swiperOption: {
         direction: 'vertical',
-        height : window.innerHeight,
+        height: window.innerHeight,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -49,27 +46,61 @@ export default {
   }
 }
 
+// https://sjbz-fd.zol-img.com.cn/t_s320x510c/g5/M00/08/0A/ChMkJliEUgWIWzw0AAQmOu8l33oAAZe7gPdxW0ABCZS129.jpg
+// https://sjbz-fd.zol-img.com.cn/t_s320x510c/g5/M00/00/04/ChMkJlfJWJuId5goAASpWt4R6n8AAU-KQJT6UsABKly959.jpg
+// https://sjbz-fd.zol-img.com.cn/t_s320x510c/g5/M00/00/04/ChMkJlfJWHuIOg2SAAQZoLX5wXMAAU-JwKjRZYABBm4920.jpg
+
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" rel="stylesheet/scss">
 #app {
   margin: 0 !important;
 }
-.page_all {
-  
-  // img {
-  //   width: 100 vw;
-  // height: 100 vh;
-  // }
+
+
+html,
+body,
+.swiper-container,
+.swiper-slide {
+  height: 100%;
 }
 
-html, 
-body, 
-.swiper-container, 
-.swiper-slide { 
-height: 100%; 
-} 
+body {
+  margin: 0;
+}
 
+.swiper-slide {
+  .page_all {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    // text-align: center;
+    // vertical-align: middle;
+    color: white;
+  }
+
+  .page_all_one {
+    background-color: red;
+    background: url(https://sjbz-fd.zol-img.com.cn/t_s320x510c/g5/M00/08/0A/ChMkJliEUgWIWzw0AAQmOu8l33oAAZe7gPdxW0ABCZS129.jpg) no-repeat center 0;
+    background-size: cover;
+  }
+  .page_all_two {
+    background-color: #efefef;
+    background: url(https://sjbz-fd.zol-img.com.cn/t_s320x510c/g5/M00/00/04/ChMkJlfJWJuId5goAASpWt4R6n8AAU-KQJT6UsABKly959.jpg) no-repeat center 0;
+    background-size: cover;
+  }
+  .page_all_four {
+    background-color: red;
+    background: url(https://sjbz-fd.zol-img.com.cn/t_s320x510c/g5/M00/00/04/ChMkJlfJWHuIOg2SAAQZoLX5wXMAAU-JwKjRZYABBm4920.jpg) no-repeat center 0;
+    background-size: cover;
+  }
+  .page_all_three {
+    background-color: #efefef;
+    background: url(http://wmimg.sc115.com/phone/pic/0729/1607fiuoa03dge2.jpg) no-repeat center 0;
+    background-size: cover;
+  }
+
+}
 
 
 h1,
@@ -90,8 +121,5 @@ li {
 a {
   color: #42b983;
 }
-
-
-
 
 </style>
