@@ -1,23 +1,34 @@
 <template>
   <div class="main">
-
+    default:<br>
+    width => 100px-200px ;<br>
+    height => 100px-200px;<br>
+    color = white-red;<br>
+    background => a.png-b.png;<br>
+    transform =>rotate(360deg);<br>
+    all 2s linear 200ms<br>
     <ul class="left_select">
       <li>
         <select v-model="model.attribute" name="category" id="category" @change="changeAttribute">
           <option v-for="(item,index) in listAttribute" :value="item">{{ item }}</option>
         </select>
       </li>
-
       <li>
         <select v-model="model.duration" name="category" id="category" @change="changeAttribute">
           <option v-for="(item,index) in listDuration" :value="item">{{ item }}</option>
         </select>
       </li>
-
-
-      
+      <li>
+        <select v-model="model.func" name="category" id="category" @change="changeAttribute">
+          <option v-for="(item,index) in listFunc" :value="item">{{ item }}</option>
+        </select>
+      </li>
+      <li>
+        <select v-model="model.delay" name="category" id="category" @change="changeAttribute">
+          <option v-for="(item,index) in listDelay" :value="item">{{ item }}</option>
+        </select>
+      </li>
     </ul>
-
     <ul class="right_exam">
       <li>
         <div class="block" id='transtions'>
@@ -42,9 +53,11 @@ export default {
     return {
       url: 'http://wmimg.sc115.com/phone/pic/0729/1607fiuoa03dge2.jpg',
       msg: 'Welcome to Your Vue.js App',
-      model: { 'attribute': 'width' ,'duration':'2s'},
+      model: { 'attribute': 'width', 'duration': '2s','func':'linear','delay':'500ms' },
       listAttribute: ['width', 'height', 'background', 'transform', 'color'],
       listDuration: ['2s', '1s', '500ms'],
+      listFunc: ['linear', 'ease', 'ease-in','ease-out','ease-in-out'],
+      listDelay: ['2s', '1s', '500ms']
     }
   },
   mounted() {},
@@ -57,10 +70,7 @@ export default {
       let style = document.getElementById("transtions").style;
       // style.transition="width 500ms ease-out";
       // style.transition="width 2s linear 200ms";
-      style.transition = this.model.attribute;
-      style.transition += " ";
-      style.transition += (this.model.duration + ' ');
-      style.transition += ' linear 200ms';
+      style.transition = `${this.model.attribute} ${this.model.duration} ${this.model.func} ${this.model.delay}`;
       console.log('style.transition ...', style.transition);
     }
   },
@@ -88,15 +98,15 @@ select {
 }
 
 .main {
-  width:100%;
+  width: 100%;
   overflow: hidden;
-  .left_select{
+  .left_select {
     float: left;
-    width:40%;
+    width: 40%;
   }
   .right_exam {
     float: left;
-    width:60%;
+    width: 60%;
   }
 }
 
