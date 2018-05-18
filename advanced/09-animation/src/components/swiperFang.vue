@@ -53,8 +53,8 @@ export default {
     return {
       url: 'http://wmimg.sc115.com/phone/pic/0729/1607fiuoa03dge2.jpg',
       msg: 'Welcome to Your Vue.js App',
-      model: { 'attribute': 'all', 'duration': '2s','func':'linear','delay':'500ms' },
-      listAttribute: ['all','width', 'height', 'background', 'transform', 'color'],
+      model: { 'attribute': 'width', 'duration': '2s','func':'linear','delay':'500ms' },
+      listAttribute: ['width', 'height', 'background', 'transform', 'color'],
       listDuration: ['2s', '1s', '500ms'],
       listFunc: ['linear', 'ease', 'ease-in','ease-out','ease-in-out'],
       listDelay: ['2s', '1s', '500ms']
