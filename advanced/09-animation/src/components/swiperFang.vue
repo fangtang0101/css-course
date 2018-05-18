@@ -1,38 +1,11 @@
+<!-- http://www.webhek.com/post/40-css-shapes.html -->
 <template>
   <div class="main">
-    default:<br>
-    width => 100px-200px ;<br>
-    height => 100px-200px;<br>
-    color = white-red;<br>
-    background => a.png-b.png;<br>
-    transform =>rotate(360deg);<br>
-    all 2s linear 200ms<br>
-    <ul class="left_select">
-      <li>
-        <select v-model="model.attribute" name="category" id="category" @change="changeAttribute">
-          <option v-for="(item,index) in listAttribute" :value="item">{{ item }}</option>
-        </select>
-      </li>
-      <li>
-        <select v-model="model.duration" name="category" id="category" @change="changeAttribute">
-          <option v-for="(item,index) in listDuration" :value="item">{{ item }}</option>
-        </select>
-      </li>
-      <li>
-        <select v-model="model.func" name="category" id="category" @change="changeAttribute">
-          <option v-for="(item,index) in listFunc" :value="item">{{ item }}</option>
-        </select>
-      </li>
-      <li>
-        <select v-model="model.delay" name="category" id="category" @change="changeAttribute">
-          <option v-for="(item,index) in listDelay" :value="item">{{ item }}</option>
-        </select>
-      </li>
-    </ul>
-    <ul class="right_exam">
-      <li>
-        <div class="block" id='transtions'>
-          beautiful ...
+    <ul>
+      <li class="animation1">
+        <div class="circle">
+          <div id="triangle-down">
+          </div>
         </div>
       </li>
     </ul>
@@ -53,10 +26,10 @@ export default {
     return {
       url: 'http://wmimg.sc115.com/phone/pic/0729/1607fiuoa03dge2.jpg',
       msg: 'Welcome to Your Vue.js App',
-      model: { 'attribute': 'width', 'duration': '2s','func':'linear','delay':'500ms' },
+      model: { 'attribute': 'width', 'duration': '2s', 'func': 'linear', 'delay': '500ms' },
       listAttribute: ['width', 'height', 'background', 'transform', 'color'],
       listDuration: ['2s', '1s', '500ms'],
-      listFunc: ['linear', 'ease', 'ease-in','ease-out','ease-in-out'],
+      listFunc: ['linear', 'ease', 'ease-in', 'ease-out', 'ease-in-out'],
       listDelay: ['2s', '1s', '500ms']
     }
   },
@@ -96,45 +69,61 @@ body {
 select {
   margin-bottom: 50px;
 }
-
-.main {
-  width: 100%;
-  overflow: hidden;
-  .left_select {
-    float: left;
-    width: 40%;
+@keyframes loading {
+  // show-front
+  0%, 100% {
+    transform: rotate( 360deg ); 
   }
-  .right_exam {
-    float: left;
-    width: 60%;
+  // show-back
+  16.5% {
+    transform: rotate( 70deg ); 
+  }
+  // show-left
+  33% {
+    transform: rotate( 120deg ); 
+  }
+  // show-right
+  49.5% {
+    transform: rotate( 180deg ); 
+  }
+  // show-top
+  66% {
+    transform: rotate( 240deg ); 
+  }
+  // show-bottom 
+  82.5% {
+     transform: rotate( 290deg ) ;
   }
 }
 
 
-ul.right_exam {
+ul {
   li {
     margin: 5px;
-    .block {
+    .circle {
       width: 100px;
       height: 100px;
-      background: url(https://sjbz-fd.zol-img.com.cn/t_s320x510c/g5/M00/00/04/ChMkJlfJWJuId5goAASpWt4R6n8AAU-KQJT6UsABKly959.jpg) no-repeat center 0;
-      background-size: cover;
-      text-align: center;
-      vertical-align: middle;
-      line-height: 100px;
-      color: white;
-      transition: all 2s linear 200ms; // 过度
-      &:hover {
-        color: red;
-        width: 200px;
-        height: 200px;
-        line-height: 200px;
-        transform: rotate(360deg);
-        background: url(https://sjbz-fd.zol-img.com.cn/t_s320x510c/g5/M00/00/04/ChMkJlfJWHuIOg2SAAQZoLX5wXMAAU-JwKjRZYABBm4920.jpg) no-repeat center 0;
-      }
+      background-color: white;
+      border: 4px solid blue;
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+    }
+    #triangle-down {
+      width: 0;
+      height: 0;
+      border-top: 50px solid transparent;
+      border-right: 150px solid white;
+      border-bottom: 50px solid transparent;
+      animation:loading 5s infinite;
+    -webkit-animation:loading 5s infinite; /* Safari 和 Chrome */
     }
   }
 }
+
+
+
+
 
 h1,
 h2 {
