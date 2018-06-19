@@ -69,30 +69,27 @@ body {
 select {
   margin-bottom: 50px;
 }
+
 @keyframes loading {
   // show-front
-  0%, 100% {
-    transform: rotate( 360deg ); 
-  }
-  // show-back
+  0%,
+  100% {
+    transform: rotate( 360deg);
+  } // show-back
   16.5% {
-    transform: rotate( 70deg ); 
-  }
-  // show-left
+    transform: rotate( 70deg);
+  } // show-left
   33% {
-    transform: rotate( 120deg ); 
-  }
-  // show-right
+    transform: rotate( 120deg);
+  } // show-right
   49.5% {
-    transform: rotate( 180deg ); 
-  }
-  // show-top
+    transform: rotate( 180deg);
+  } // show-top
   66% {
-    transform: rotate( 240deg ); 
-  }
-  // show-bottom 
+    transform: rotate( 240deg);
+  } // show-bottom 
   82.5% {
-     transform: rotate( 290deg ) ;
+    transform: rotate( 290deg);
   }
 }
 
@@ -112,11 +109,15 @@ ul {
     #triangle-down {
       width: 0;
       height: 0;
-      border-top: 50px solid transparent;
-      border-right: 150px solid white;
-      border-bottom: 50px solid transparent;
-      animation:loading 5s infinite;
-    -webkit-animation:loading 5s infinite; /* Safari 和 Chrome */
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 120px solid red;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      animation: loading 5s infinite;
+      -webkit-animation: loading 5s infinite;
+      /* Safari 和 Chrome */
     }
   }
 }

@@ -1,0 +1,216 @@
+/*base part start */
+
+// mobile 移动设备断点，视窗宽度 ≤ 768 px
+// @media (max-width: 768px) {
+//     ul.ex01 {
+//         background: #999;
+//     }
+// }
+// // tablet 平板电脑设备断点，视窗宽度 ≥ 769 px
+// @media (min-width: 769px) and (max-width: 1023px) {
+//     ul.ex01 {
+//         background: #777;
+//     }
+// }
+
+// // desktop 桌面电脑断点，视窗宽度 ≥ 1024 px
+// @media (min-width: 1024px) and (max-width: 1216px) {
+//     ul.ex01 {
+//         background: #666;
+//     }
+// }
+
+// // widescreen  宽屏电脑断点，视窗宽度 ≥ 1216 px
+// @media (min-width: 1216px) and (max-width: 1408px) {
+//     ul.ex01 {
+//         background: #555;
+//     }
+// }
+
+// // fullhd  高清宽屏电脑断点，视窗宽度 ≥ 1408 px...
+// @media (min-width: 1408px ) {
+//     ul.ex01 {
+//         background: #333;
+//     }
+// }
+
+ul {
+    list-style: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+li.ex01{
+    overflow: hidden;
+    padding: 0 100px 0 100px;
+    .text {
+        height: 50px;
+        text-align: center;
+    }
+    .main{
+        float: left;
+        width: 100%;
+        background-color: #efefef;
+    }
+    .left {
+        width: 100px;
+        float: left;
+        background-color: red;
+        margin-left: -100%;
+        position: relative;
+        left:-100px;
+        opacity:0.5;
+    }
+    .right {
+        width: 100px;
+        float: right;
+        margin-left: -100px;
+        background-color: orange;
+
+        position: relative;
+        right: -100px;
+
+    }
+}
+
+li.ex02{
+    overflow: hidden;
+    // padding: 0 100px 0 100px;
+    .text {
+        height: 50px;
+        text-align: center;
+    }
+    .main{
+        float: left;
+        width: 100%;
+        background-color: #efefef;
+        .main-content {
+            margin: 0 200px;
+            // text-align: center;
+
+        }
+    }
+    .left {
+        width: 100px;
+        float: left;
+        background-color: red;
+        margin-left: -100%;
+        // position: relative;
+        // left:-100px;
+        opacity:0.5;
+    }
+    .right {
+         opacity:0.5;
+        width: 100px;
+        float: right;
+        margin-left: -100px;
+        background-color: orange;
+
+        // position: relative;
+        // right: -100px;
+        
+    }
+}
+
+li.ex03{
+     text-align: center;
+    span{
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+
+    }
+}
+
+li.ex04 {
+    div{
+        width: 100px; // when you set margin to auto ,you must give it a width ,then it can center
+        margin: auto;
+    }
+}
+
+li.ex05 {
+    position: relative;
+    height: 100px;  // ps:诡异
+    div{
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        background-color: red;
+
+        // text-align: center;  //test shw this
+    }
+}
+
+li.ex06{
+    div {
+        height: 50px;
+        background-color: #efefef;
+        line-height: 50px;
+
+        text-align: center;
+    }
+}
+
+li.ex07{
+    height: 200px;   // must set 
+    background-color: #333;
+    position: relative;
+    div {
+        width: 200px;
+        height: 100px;
+        background-color: #999;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        margin-left: -100px;
+        margin-top: -50px;
+    }
+}
+
+li.ex08{
+    height: 200px;
+    background-color: #999;
+    position: relative;
+    div{
+        width: 200px;
+        height: 100px;
+        background-color: #333;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+    }
+}
+
+
+li.ex09{
+    height: 200px;   // must set 
+    background-color: #333;
+    position: relative;
+    div {
+        width: 200px;
+        height: 100px;
+        background-color: #999;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
